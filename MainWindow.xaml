@@ -1,0 +1,22 @@
+﻿<Window x:Class="VisualPinball.MaterialPatcher.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualPinball.MaterialPatcher.GUI"
+        mc:Ignorable="d"
+        Title="Material Patcher" Height="290.075" Width="312" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Material File" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BrowseMaterialFileButton" Content="Browse..." HorizontalAlignment="Left" Margin="240,44,0,0" VerticalAlignment="Top" Click="BrowseMaterialFileButton_Click"/>
+        <Label Content="Input Path" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BrowseInputPathButton" Content="Browse..." HorizontalAlignment="Left" Margin="240,106,0,0" VerticalAlignment="Top" Click="BrowseInputPathButton_Click"/>
+        <Label Content="Output Path" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BrowseOutputPathButton" Content="Browse..." HorizontalAlignment="Left" Margin="240,168,0,0" VerticalAlignment="Top" Click="BrowseOutputPathButton_Click"/>
+        <Button x:Name="ProcessButton" Content="Process" HorizontalAlignment="Right" Margin="0,212,100,0" VerticalAlignment="Top" Height="34" Width="104" Click="ProcessButton_Click"/>
+        <TextBox x:Name="MaterialFileTextBox" HorizontalAlignment="Left" Height="36" Margin="10,36,0,0" Text="No file selected" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsReadOnly="True" IsEnabled="True" AllowDrop="True" Drop="MaterialFileTextBox_Drop" PreviewDragOver="MaterialFileTextBox_PreviewDragOver"/>
+        <TextBox x:Name="InputTextBox" HorizontalAlignment="Left" Height="36" Margin="10,98,0,0" Text="No file selected" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsReadOnly="True" IsEnabled="True" AllowDrop="True" Drop="InputTextBox_Drop" PreviewDragOver="InputTextBox_PreviewDragOver"/>
+        <TextBox x:Name="OutputTextBox" HorizontalAlignment="Left" Height="36" Margin="10,160,0,0" Text="No file selected" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsReadOnly="True" IsEnabled="True" AllowDrop="True" Drop="OutputTextBox_Drop" PreviewDragOver="OutputTextBox_PreviewDragOver"/>
+
+    </Grid>
+</Window>
