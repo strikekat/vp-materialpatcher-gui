@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.Diagnostics;
+using System.Windows;
 
 namespace VisualPinball.MaterialPatcher.GUI
 {
@@ -19,6 +20,12 @@ namespace VisualPinball.MaterialPatcher.GUI
 
         public bool PatchMaterials(string materialFile, string inputPath, string outputPath)
         {
+            if (!System.IO.File.Exists(patcherExecutable))
+            {
+                MessageBox.Show("Patcher not found! Check the location of the material patcher executable.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
             using (var process = new Process())
             {
                 process.StartInfo.FileName = patcherExecutable;
